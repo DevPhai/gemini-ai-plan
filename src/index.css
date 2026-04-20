@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Prompt:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Prompt", ui-sans-serif, system-ui, sans-serif;
+  --color-dark-bg: #050505;
+  --color-dark-surface: #0f0f0f;
+  --color-dark-border: #1f1f1f;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-dark-bg);
+  }
+  body {
+    background-color: var(--color-dark-bg);
+    color: white;
+  }
+}
