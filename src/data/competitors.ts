@@ -31,11 +31,19 @@ export const COMPETITORS: Competitor[] = [
     apiInputUSD: SOURCES.geminiApiInput.value as number,
     apiOutputUSD: SOURCES.geminiApiOutput.value as number,
     intelligenceIndex: 57,
-    contextWindow: "2,000,000+",
+    contextWindow: "1,000,000",
     reasoningQuality: "A+",
     speed: "เร็วที่สุด",
-    workspaceApps: 6, // Gmail, Docs, Drive, Sheets, Slides, Calendar
-    bundledExtras: ["5 TB Storage", "YouTube Premium", "Gemini Code Assist", "AI Studio Credits"],
+    workspaceApps: 7, // Gmail, Docs, Drive, Sheets, Slides, Calendar, Vids
+    bundledExtras: [
+      "5 TB Storage (Photos, Drive, Gmail)",
+      "1,000 AI Credits (Flow & Whisk)",
+      "Gemini Code Assist & CLI",
+      "Google Antigravity Agentic AI",
+      "Deep Research & Veo 3.1 Lite",
+      "NotebookLM (5x Limits)",
+      "Workspace (Gmail, Docs, Vids)",
+    ],
   },
   {
     id: "claude",

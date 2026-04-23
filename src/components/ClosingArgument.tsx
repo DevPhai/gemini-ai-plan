@@ -17,30 +17,30 @@ const CARDS = [
   {
     icon: Brain,
     title: "Superior Intelligence at Fractional Cost",
-    citation: 3,
+    citation: 'https://artificialanalysis.ai/models?intelligence=artificial-analysis-intelligence-index',
     bullets: [
       "อันดับ #1 ใน Frontier Model Leaderboard (Intelligence Index 57)",
       "API ถูกที่สุดในกลุ่ม: $2 / 1M tokens (Claude $5, GPT $2.50)",
-      "Context Window 2M+ tokens — มากกว่าคู่แข่ง 2-4 เท่า",
+      "Context Window 1M+ tokens — มากกว่าคู่แข่ง 1-2 เท่า",
     ],
   },
   {
     icon: Layers,
     title: "Native Ecosystem Advantage",
-    citation: 5,
+    citation: 'https://one.google.com/about/google-ai-plans/',
     bullets: [
       "ผสานเข้ากับ Workspace ที่ทีมใช้อยู่แล้ว: Gmail, Docs, Drive, Sheets, Slides, Calendar",
       "ไม่ต้อง copy-paste ข้ามแอปอีกต่อไป",
-      "AI พร้อมใช้ในที่ที่งานเกิดขึ้น — ไม่ใช่ tab ที่ 47",
+      "AI พร้อมใช้ในที่ที่งานเกิดขึ้น",
     ],
   },
   {
     icon: Gift,
     title: "Unmatched Bundle Value",
-    citation: 6,
+    citation: 'https://one.google.com/about/google-ai-plans/',
     bullets: [
       "5 TB Cloud Storage (คู่แข่งให้ 100GB)",
-      `YouTube Premium รวมในแพ็คเกจ (มูลค่า ${fmt(bundledExtrasYearlyTHB.youtubePremium)}/ปี)`,
+      `Google Cloud & Home Premium รวมในแพ็คเกจ (มูลค่า ${fmt(bundledExtrasYearlyTHB.cloudCredits + bundledExtrasYearlyTHB.googleHomePremium)}/ปี)`,
       "Gemini Code Assist + Jules + AI Studio Credits",
       `รวมเพียง ${fmt(yearlyCostTHB.gemini)}/ปี — ถูกกว่าคู่แข่ง ${savingsVsCompetitorPct.claude}%`,
     ],
@@ -90,10 +90,12 @@ export const ClosingArgument = () => (
               <h3 className="text-xl font-bold mb-2 leading-tight">
                 {card.title}
                 <a
-                  href={`#source-${card.citation}`}
+                  href={`${card.citation}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="ml-1 text-[10px] text-blue-400/70 hover:text-blue-400 align-super"
                 >
-                  [{card.citation}]
+                  [ref]
                 </a>
               </h3>
               <ul className="mt-4 space-y-3 flex-1">

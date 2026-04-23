@@ -57,17 +57,18 @@ const CITATIONS: Citation[] = [
   },
   {
     num: 6,
-    topic: "Bundled Value (Storage + YouTube Premium)",
+    topic: "Bundled Value (Storage + AI Pro Credits)",
     sourceKeys: [
       "geminiAiProStorageIncluded",
-      "youtubePremiumTH",
+      "googleCloudCredits",
+      "googleHomePremium",
       "googleOneStorageBasicTH",
     ],
   },
   {
     num: 7,
-    topic: "YouTube Premium Thailand",
-    sourceKeys: ["youtubePremiumTH"],
+    topic: "Google Home & Cloud Credits Pricing",
+    sourceKeys: ["googleCloudCredits", "googleHomePremium"],
   },
   {
     num: 8,

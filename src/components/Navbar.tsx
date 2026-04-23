@@ -13,19 +13,18 @@ export const Navbar = () => (
           <Sparkles className="w-5 h-5 text-white" />
         </div>
         <span className="font-bold text-xl tracking-tight text-white">
-          Google One <span className="text-blue-400">AI</span>
+          Google AI <span className="text-blue-400">Pro</span>
         </span>
       </div>
       <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
         <a href="#data" className="hover:text-white transition-colors">Data</a>
+        <a href="#plans" className="hover:text-white transition-colors">Plans</a>
         <a href="#tco" className="hover:text-white transition-colors">Cost</a>
         <a href="#benefits" className="hover:text-white transition-colors">Features</a>
         <a href="#closing" className="hover:text-white transition-colors">Why Gemini</a>
         <a href="#sources" className="hover:text-white transition-colors">Sources</a>
       </div>
-      <button className="px-5 py-2 rounded-full border border-gray-700 text-white text-sm font-semibold hover:bg-white/5 transition-all">
-        Sign In
-      </button>
+     
     </div>
   </nav>
 );

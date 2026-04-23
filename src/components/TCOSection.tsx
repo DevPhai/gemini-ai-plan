@@ -42,13 +42,23 @@ const ROWS: Row[] = [
     },
   },
   {
-    component: "YouTube Premium (รายปี)",
-    citation: 7,
+    component: "Google Cloud Credits ($10/mo)",
+    citation: 5,
     values: {
       gemini: incl,
-      claude: `+ ${fmt(bundledExtrasYearlyTHB.youtubePremium)}`,
-      chatgpt: `+ ${fmt(bundledExtrasYearlyTHB.youtubePremium)}`,
-      copilot: `+ ${fmt(bundledExtrasYearlyTHB.youtubePremium)}`,
+      claude: `+ ${fmt(bundledExtrasYearlyTHB.cloudCredits)}`,
+      chatgpt: `+ ${fmt(bundledExtrasYearlyTHB.cloudCredits)}`,
+      copilot: `+ ${fmt(bundledExtrasYearlyTHB.cloudCredits)}`,
+    },
+  },
+  {
+    component: "Google Home Premium Standard",
+    citation: 5,
+    values: {
+      gemini: incl,
+      claude: `+ ${fmt(bundledExtrasYearlyTHB.googleHomePremium)}`,
+      chatgpt: `+ ${fmt(bundledExtrasYearlyTHB.googleHomePremium)}`,
+      copilot: `+ ${fmt(bundledExtrasYearlyTHB.googleHomePremium)}`,
     },
   },
   {
@@ -76,7 +86,7 @@ export const TCOSection = () => (
       <div className="mb-16">
         <h2 className="text-4xl font-bold mb-4"><span className="text-blue-400">Total</span> Cost of Ownership — 1 ปี</h2>
         <p className="text-gray-500 text-lg max-w-3xl">
-          เปรียบเทียบค่าใช้จ่ายจริงเมื่อรวม AI subscription + YouTube Premium + Cloud Storage
+          เปรียบเทียบค่าใช้จ่ายจริงเมื่อรวม AI subscription + Google Cloud Credits + Home Premium
           <span className="block mt-2 text-blue-400 font-semibold">
             Gemini ได้ทุกอย่างในแพ็คเกจเดียว — คู่แข่งต้องจ่ายแยก
           </span>
@@ -132,7 +142,7 @@ export const TCOSection = () => (
 
       <div className="bg-[#0f0f0f] border border-gray-800 rounded-[3rem] p-8 md:p-12 shadow-2xl">
         <h3 className="text-2xl font-bold mb-2">ภาพรวม <span className="text-blue-400">Total</span> Cost (1 ปี)</h3>
-        <p className="text-sm text-gray-500 mb-8">หน่วย: บาท · รวม subscription + YouTube Premium + Storage</p>
+        <p className="text-sm text-gray-500 mb-8">หน่วย: บาท · รวม subscription + Cloud Credits + Home Premium + Storage</p>
         <div className="w-full h-80">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={chartData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>

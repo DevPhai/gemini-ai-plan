@@ -8,8 +8,8 @@ import { Check, ArrowRight, Sparkles } from "lucide-react";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { ComparisonTable } from "./components/ComparisonTable";
+import { PlanComparison } from "./components/PlanComparison";
 import { TCOSection } from "./components/TCOSection";
-import { CounterRebuttal } from "./components/CounterRebuttal";
 import { ClosingArgument } from "./components/ClosingArgument";
 import { SourceCitations } from "./components/SourceCitations";
 import { Footer } from "./components/Footer";
@@ -21,40 +21,10 @@ export default function App() {
 
       <Hero />
 
-      {/* Comparison Section */}
-      <section id="compare" className="py-32 px-4 bg-[#080808] scroll-mt-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <div className="max-w-xl">
-              <h2 className="text-4xl font-bold mb-4">เปรียบเทียบความคุ้มค่า</h2>
-              <p className="text-gray-500 text-lg">
-                ทำไม Gemini ถึงเป็นทางเลือกที่ดีที่สุดสำหรับมือโปรที่ต้องการผลลัพธ์ที่เหนือกว่า ในราคาที่คุ้มค่ากว่าเดิม
-              </p>
-            </div>
-            <div className="text-xs font-bold text-gray-600 uppercase tracking-widest border border-gray-800 px-4 py-2 rounded-lg">
-              Competitive Matrix · April 2026
-            </div>
-          </div>
-          <ComparisonTable />
-          <div className="mt-8 text-center text-sm text-gray-500 italic">
-            * ทุกตัวเลข <a href="#sources" className="underline hover:text-blue-400 transition-colors">ตรวจสอบได้ที่ Sources</a>
-            {" · "}
-            Intelligence Index จาก{" "}
-            <a
-              href="https://artificialanalysis.ai/models?intelligence=artificial-analysis-intelligence-index"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-blue-400 transition-colors"
-            >
-              Artificial Analysis (Frontier Model Leaderboard)
-            </a>
-          </div>
-        </div>
-      </section>
+          {/* Plan Comparison Section */}
+          <PlanComparison />
 
-      <TCOSection />
-
-      <CounterRebuttal />
+      
 
       {/* Intelligence vs. Price Chart Section */}
       <section className="py-32 px-4 bg-[#050505]">
@@ -135,33 +105,30 @@ export default function App() {
       <section id="offer" className="py-32 px-4 bg-gradient-to-t from-blue-900/10 to-[#050505] scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <div className="bg-[#0f0f0f] rounded-[4rem] p-12 md:p-20 border border-gray-800 relative overflow-hidden shadow-[0_0_80px_rgba(59,130,246,0.1)]">
-            <div className="absolute top-0 right-0">
-              <div className="bg-blue-500 text-white text-[10px] font-black uppercase tracking-[0.2em] px-10 py-2 rotate-45 translate-x-12 translate-y-10 shadow-lg">
-                Exclusive Offer
-              </div>
-            </div>
-
+            
             <div className="text-center relative z-10">
-              <h2 className="text-5xl font-black mb-6">Google One AI Premium</h2>
+              <h2 className="text-5xl font-black mb-4">Google AI Pro</h2>
+              <p className="text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                รับสิทธิ์เข้าถึงในระดับที่สูงขึ้นสำหรับฟีเจอร์ใหม่ที่ทรงพลังเพื่อเพิ่มประสิทธิภาพการทำงานและความคิดสร้างสรรค์
+              </p>
               <div className="flex items-center justify-center gap-4 mb-12">
-                <span className="text-7xl font-bold text-white leading-none tracking-tighter">750.-</span>
+                <span className="text-7xl font-bold text-white leading-none tracking-tighter">฿750</span>
                 <div className="text-left border-l border-gray-800 pl-4">
-                  <div className="text-sm text-gray-400 font-bold uppercase tracking-widest">ต่อเดือน</div>
-                  <div className="text-blue-400 text-lg font-bold italic">แผน AI Pro ระดับพรีเมียม</div>
+                  <div className="text-sm text-gray-400 font-bold uppercase tracking-widest">THB/เดือน</div>
+                  <div className="text-blue-400 text-lg font-bold italic">Google AI Pro Plan</div>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-x-12 gap-y-6 text-left mb-16 max-w-3xl mx-auto">
                 {[
-                  "Gemini 3 Pro & Gemini 3 Ultra",
-                  "1,000 AI Credits ต่อเดือน",
-                  "พื้นที่เก็บข้อมูล 5 TB ในบัญชีเดิม",
-                  "Deep Search & Veo 2 (Video Gen)",
-                  "Gemini Code Assist & Jules",
-                  "NotebookLM Pro (Unlimited Source)",
-                  "YouTube Premium & Music",
-                  "Gemini API Keys & AI Studio Credits",
-                  "สิทธิสมาชิกระดับพรีเมียม Google One",
+                  "แอป Gemini: 3.1 Pro, Deep Research, Nano Banana Pro และ Veo 3.1 Lite",
+                  "เครดิต AI รายเดือน 1,000 เครดิต (สำหรับการสร้างวิดีโอใน Flow และ Whisk)",
+                  "Flow: สิทธิ์เข้าถึงเครื่องมือสร้างภาพยนตร์ด้วย AI และ Veo 3.1 แบบจำกัด",
+                  "Gemini Code Assist และ Gemini CLI (เพิ่มเพดานขีดจำกัดคำขอรายวัน)",
+                  "Google Antigravity: แพลตฟอร์มการพัฒนาด้าน Agentic AI",
+                  "NotebookLM: ผู้ช่วยด้านการวิจัย เพิ่มขีดจำกัดขึ้นถึง 5 เท่า",
+                  "Gemini ใน Gmail, Docs, Vids และแอปอื่นๆ ของ Google",
+                  "พื้นที่เก็บข้อมูล 5 TB สำหรับ Photos, ไดรฟ์ และ Gmail",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
                     <div className="mt-1 flex-shrink-0 w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
@@ -170,19 +137,7 @@ export default function App() {
                 ))}
               </div>
 
-              <div className="flex flex-col items-center gap-8">
-                <button className="w-full md:w-auto bg-white text-black px-16 py-6 rounded-2xl text-xl font-black transition-all hover:scale-[1.03] shadow-2xl flex items-center justify-center gap-4 group">
-                  สมัครใช้งานทันที
-                  <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center group-hover:bg-blue-800 transition-colors">
-                    <ArrowRight className="w-5 h-5 text-white" />
-                  </div>
-                </button>
-
-                <div className="bg-white/5 border border-gray-800 px-8 py-5 rounded-3xl text-center">
-                  <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold mb-2">สิทธิพิเศษสำหรับคุณ</p>
-                  <p className="text-lg text-white font-black">ลดทันที 50% ต่อเนื่อง 6 เดือน</p>
-                </div>
-              </div>
+            
               <p className="mt-12 text-gray-600 text-xs tracking-wide">
                 ยกเลิกได้ทุกเมื่อ | เป็นไปตามข้อกำหนดและเงื่อนไขของ Google One
               </p>

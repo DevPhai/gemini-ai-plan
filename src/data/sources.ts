@@ -30,10 +30,10 @@ export const SOURCES = {
   geminiAiProSubscriptionTH: {
     value: 750,
     unit: "THB/month",
-    url: "https://one.google.com/about/plans?hl=en-TH",
+    url: "https://one.google.com/about/google-ai-plans/",
     publisher: "Google One Thailand",
     verifiedAt: VERIFIED_AT,
-    note: "Includes 5TB storage, YouTube Premium, AI Pro features",
+    note: "Includes 5TB storage, $10 Cloud Credits, Jules AI Agent, Google Home Premium",
   },
   claudeProSubscription: {
     value: 20,
@@ -116,13 +116,21 @@ export const SOURCES = {
   },
 
   // ===== Bundled value items =====
-  youtubePremiumTH: {
-    value: 259,
-    unit: "THB/month",
-    url: "https://support.google.com/youtube/answer/12906094",
-    publisher: "YouTube Thailand",
+  googleCloudCredits: {
+    value: 10,
+    unit: "USD/month",
+    url: "https://one.google.com/about/google-ai-plans/",
+    publisher: "Google One Thailand",
     verifiedAt: VERIFIED_AT,
-    note: "Individual plan, 2026 pricing",
+    note: "$10 monthly credit for Google Cloud / AI Studio",
+  },
+  googleHomePremium: {
+    value: 10,
+    unit: "USD/month",
+    url: "https://one.google.com/about/google-ai-plans/",
+    publisher: "Google One Thailand",
+    verifiedAt: VERIFIED_AT,
+    note: "Includes Google Home Premium Standard plan",
   },
   googleOneStorageBasicTH: {
     value: 70,
@@ -150,10 +158,10 @@ export const SOURCES = {
     note: "Gemini 3.1 Pro, Claude Opus 4.7, GPT-5.4 (xhigh) all tied at 57 as of April 2026",
   },
   geminiContextWindow: {
-    value: "2,000,000+",
+    value: "1,000,000",
     unit: "tokens",
-    url: "https://ai.google.dev/gemini-api/docs/models",
-    publisher: "Google AI for Developers",
+    url: "https://one.google.com/about/google-ai-plans/",
+    publisher: "Google One Thailand",
     verifiedAt: VERIFIED_AT,
   },
   claudeContextWindow: {
@@ -194,28 +202,32 @@ export const yearlyCostTHB = {
 
 /** Bundled extras included in Gemini AI Pro that competitors charge separately */
 export const bundledExtrasYearlyTHB = {
-  youtubePremium: 259 * 12,
+  cloudCredits: 10 * 36 * 12, // $10/mo converted to THB
+  googleHomePremium: 10 * 36 * 12, // $10/mo value converted to THB
   storageBasic100GB: 70 * 12,
 };
 
 /**
- * Total 1-year cost if you also wanted YouTube Premium + 100GB storage:
- * Gemini = subscription only (everything bundled, plus 5TB).
- * Others = subscription + YouTube Premium + storage.
+ * Total 1-year cost if you also wanted the same features:
+ * Gemini = subscription only (everything bundled).
+ * Others = subscription + Cloud Credits + Home Premium + storage.
  */
 export const tcoYearlyTHB = {
   gemini: yearlyCostTHB.gemini,
   claude:
     yearlyCostTHB.claude +
-    bundledExtrasYearlyTHB.youtubePremium +
+    bundledExtrasYearlyTHB.cloudCredits +
+    bundledExtrasYearlyTHB.googleHomePremium +
     bundledExtrasYearlyTHB.storageBasic100GB,
   chatgpt:
     yearlyCostTHB.chatgpt +
-    bundledExtrasYearlyTHB.youtubePremium +
+    bundledExtrasYearlyTHB.cloudCredits +
+    bundledExtrasYearlyTHB.googleHomePremium +
     bundledExtrasYearlyTHB.storageBasic100GB,
   copilot:
     yearlyCostTHB.copilot +
-    bundledExtrasYearlyTHB.youtubePremium +
+    bundledExtrasYearlyTHB.cloudCredits +
+    bundledExtrasYearlyTHB.googleHomePremium +
     bundledExtrasYearlyTHB.storageBasic100GB,
 };
 

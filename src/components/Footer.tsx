@@ -9,7 +9,7 @@ export const Footer = () => (
       <div className="text-left">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-6 h-6 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-lg" />
-          <span className="font-bold text-lg tracking-tight">Google One AI</span>
+          <span className="font-bold text-lg tracking-tight">Google AI Pro</span>
         </div>
         <div className="flex gap-8 opacity-40 grayscale">
           <span className="text-[10px] uppercase font-bold tracking-widest">DeepMind</span>
