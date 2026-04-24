@@ -13,7 +13,7 @@ export const Navbar = () => (
           <Sparkles className="w-5 h-5 text-white" />
         </div>
         <span className="font-bold text-xl tracking-tight text-white">
-          Google AI <span className="text-blue-400">Pro</span>
+          Gemini <span className="text-blue-400">AI</span>
         </span>
       </div>
       <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">

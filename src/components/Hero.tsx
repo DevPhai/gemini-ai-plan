@@ -46,15 +46,13 @@ export const Hero = () => {
                 onMouseLeave={() => setIsHovered(false)}
                 className="group relative bg-white text-black px-12 py-6 rounded-2xl text-xl font-black transition-all hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_50px_rgba(255,255,255,0.1)] flex items-center gap-4 overflow-hidden"
               >
-                เริ่มต้นใช้งาน Google AI Pro
+                Google AI Studio
                 <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-blue-600">
                   <ArrowRight className={`w-5 h-5 text-white transition-transform duration-300 ${isHovered ? 'translate-x-1' : ''}`} />
                 </div>
               </a>
             </div>
-            <div className="text-sm text-gray-500 font-bold tracking-widest uppercase opacity-60">
-              *฿750 THB/เดือน หรือเลือกสมัครรายปีเพื่อความคุ้มค่ากว่า
-            </div>
+           
         </motion.div>
 
         {/* Stats Section spanning full width for a "complete" look */}
