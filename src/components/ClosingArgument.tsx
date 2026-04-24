@@ -124,10 +124,10 @@ export const ClosingArgument = () => (
           คำตอบคือ <span className="text-blue-400">Gemini</span> —
           เพราะเราไม่ได้แค่แข่งด้วย Intelligence
           <br />
-          เราชนะด้วยการเป็นส่วนหนึ่งของ workflow ที่คุณมีอยู่แล้ว"
+          เราชนะด้วยการเป็นส่วนหนึ่งของ workflow ที่คุณเคยชินอยู่แล้ว"
         </p>
         <div className="text-xs uppercase tracking-[0.3em] text-gray-500 font-bold">
-          — Google AI Plan Pro Team
+          — PaPa Mama 2 Song
         </div>
       </motion.blockquote>
     </div>

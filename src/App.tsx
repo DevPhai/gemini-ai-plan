@@ -64,20 +64,29 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
             <div className="md:col-span-12 lg:col-span-8 bg-gradient-to-br from-gray-900 to-[#0f0f0f] border border-gray-800 rounded-[3rem] p-12 relative overflow-hidden group">
               <div className="relative z-10 max-w-lg">
-                <h3 className="text-4xl font-bold mb-6">อ่าน PDF 2,000 หน้าในพริบตา</h3>
+                <h3 className="text-4xl font-bold mb-6">NotebookLM</h3>
                 <p className="text-gray-400 text-xl mb-8 leading-relaxed">
-                  "หมัดเด็ด: ด้วย Context Window 2 ล้าน Tokens คุณสามารถใส่หนังสือยกชุด หรือ Codebase ทั้งโปรเจกต์ เพื่อให้ Gemini ช่วยวิเคราะห์ได้ทันที"
+                  "สรุปและวิเคราะห์ข้อมูลจากเอกสารจำนวนมหาศาล ด้วยพลังของ Gemini 1.5 Pro ช่วยให้คุณเชื่อมโยงข้อมูลจาก PDF, Google Docs และแหล่งข้อมูลอื่นๆ ได้อย่างแม่นยำ"
                 </p>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-4 mb-8">
                   <div className="px-6 py-3 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-3">
                     <Check className="text-green-500 w-5 h-5" />
-                    <span className="text-sm font-semibold">2,000,000+ Tokens</span>
+                    <span className="text-sm font-semibold">50 Sources Per Notebook</span>
                   </div>
                   <div className="px-6 py-3 bg-white/5 rounded-2xl border border-white/10 flex items-center gap-3">
                     <Check className="text-green-500 w-5 h-5" />
-                    <span className="text-sm font-semibold">Native Apps</span>
+                    <span className="text-sm font-semibold">Gemini 1.5 Pro Powered</span>
                   </div>
                 </div>
+                <a 
+                  href="https://notebooklm.google/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-2xl font-bold transition-all group/btn"
+                >
+                  ลองใช้ NotebookLM ฟรี
+                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                </a>
               </div>
               <motion.div
                 className="absolute right-0 bottom-0 opacity-10"
@@ -89,13 +98,23 @@ export default function App() {
             </div>
 
             <div className="md:col-span-12 lg:col-span-4 grid gap-8">
-              <div className="bg-[#0f0f0f] border border-gray-800 rounded-[3rem] p-10 flex flex-col justify-center">
-                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8">
-                  <Check className="text-black w-8 h-8 stroke-[3]" />
+              <a 
+                href="https://jules.google" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-[#0f0f0f] border border-gray-800 rounded-[3rem] p-10 flex flex-col justify-center hover:border-blue-500/50 transition-colors group/jules"
+              >
+                <div className="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover/jules:scale-110 transition-transform">
+                  <Sparkles className="text-white w-8 h-8" />
                 </div>
-                <h4 className="text-2xl font-bold mb-4">Workspace Native</h4>
-                <p className="text-gray-400">ร่างอีเมล ดึงข้อมูลจาก Docs หรือวิเคราะห์ชีทงานได้ทันทีเพียงปลายนิ้ว</p>
-              </div>
+                <h4 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                  Jules
+                  <ArrowRight className="w-5 h-5 opacity-0 group-hover/jules:opacity-100 group-hover/jules:translate-x-1 transition-all" />
+                </h4>
+                <p className="text-gray-400">
+                  AI Coding Agent ตัวใหม่ที่ช่วยจัดการงานที่ซับซ้อน ตั้งแต่แก้ Bug ไปจนถึงเขียนแผนงานเบื้องหลังให้คุณ
+                </p>
+              </a>
             </div>
           </div>
         </div>

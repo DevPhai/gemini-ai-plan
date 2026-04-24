@@ -17,9 +17,7 @@ export const Navbar = () => (
         </span>
       </div>
       <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
-        <a href="#data" className="hover:text-white transition-colors">Data</a>
         <a href="#plans" className="hover:text-white transition-colors">Plans</a>
-        <a href="#tco" className="hover:text-white transition-colors">Cost</a>
         <a href="#benefits" className="hover:text-white transition-colors">Features</a>
         <a href="#closing" className="hover:text-white transition-colors">Why Gemini</a>
         <a href="#sources" className="hover:text-white transition-colors">Sources</a>
